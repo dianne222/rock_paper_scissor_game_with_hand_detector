@@ -7,9 +7,19 @@ capture.set(4, 480)
 
 while True:
     background_image = cv2.imread("images/background_image.png")
-
     success, image = capture.read()
-    cv2.imshow("image", img)
-    cv2.imshow("background", background_image)
+
+    if not success:
+        print("failed to read camera")
+        break
+
+    image_scaled = cv2.resize(image, (0, 0), None, 0.875, 0.875)
+    image_scaled = image_scaled[:, 80:480]
+
+    background_image[233:653, 795:1195] = image_scaled
+
+    cv2.imshow("Image", image)
+    cv2.imshow("Background", background_image)
+    cv2.imshow("Scaled", image_scaled)
 
     cv2.waitKey(1)

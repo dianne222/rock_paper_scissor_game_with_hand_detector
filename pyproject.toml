@@ -3,4 +3,7 @@ name = "rock-paper-scissor-game"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "cvzone>=1.6.1",
+    "opencv-python>=4.13.0.92",
+]
