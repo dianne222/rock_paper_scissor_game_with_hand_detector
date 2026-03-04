@@ -5,5 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
     "cvzone>=1.6.1",
+    "mediapipe>=0.10.32",
     "opencv-python>=4.13.0.92",
+    "protobuf==3.20.0",
 ]
